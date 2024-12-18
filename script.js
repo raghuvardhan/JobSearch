@@ -3,7 +3,7 @@ const taskInput = document.getElementById("new-task");
 const addTaskBtn = document.getElementById("add-task-btn");
 const taskList = document.getElementById("task-list");
 
-const dailyTasls = [["Continue applying to 10 jobs daily",
+const dailyTasks = [["Continue applying to 10 jobs daily",
   "Send connection requests to 20 professionals every day",
   "Engage with 3-5 posts on LinkedIn daily to improve visibility",
   "Search and save 10 job posts",
@@ -53,6 +53,8 @@ function preloadTasksForToday() {
     completed: false
   }));
 }
+
+tasks.push(dailyTasks.map(task => ({text: task, completed: false})));
 
 // Render tasks
 function renderTasks() {
